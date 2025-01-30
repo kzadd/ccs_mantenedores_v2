@@ -1,0 +1,107 @@
+@use 'shared/styles/theme' as *;
+
+.login-auth {
+  align-items: center;
+  display: flex;
+  min-height: 100vh;
+  overflow: hidden;
+  position: relative;
+
+  .login-auth__wave-pattern {
+    height: 100%;
+    inset: 0;
+    object-fit: cover;
+    position: absolute;
+    width: 100%;
+    z-index: -1;
+  }
+
+  .login-auth__container {
+    align-items: center;
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: 1fr;
+    margin: 0 auto;
+    max-width: 80rem;
+    padding: $base-container-spacing;
+    position: relative;
+
+    .login-auth__welcome {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+
+      .login-auth__profile-icon {
+        height: 4rem;
+        width: 4rem;
+      }
+
+      .login-auth__welcome-title {
+        color: $primary-main;
+        font-size: 2.25rem;
+        font-weight: 700;
+      }
+
+      .login-auth__welcome-description {
+        color: $text-muted;
+        font-size: 1.15rem;
+      }
+    }
+
+    .login-auth__form-container {
+      background-color: $white;
+      border-radius: 1rem;
+      box-shadow: $base-shadow;
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+      padding: 4rem;
+
+      .login-auth__logo {
+        height: auto;
+        width: 12.75rem;
+      }
+
+      .login-auth__form-title {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+
+        .login-auth__title {
+          font-size: 1.25rem;
+          font-weight: 500;
+          margin: 0;
+        }
+
+        .login-auth__description {
+          color: $text-muted;
+          font-size: 0.8rem;
+          margin: 0;
+        }
+      }
+
+      .login-auth__form {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+
+        .input-group-text {
+          cursor: pointer;
+        }
+      }
+    }
+
+    @media (min-width: $base-breakpoint-xl) {
+      gap: 10rem;
+      grid-template-columns: 1fr 1fr;
+    }
+
+    @media (max-width: $base-breakpoint-md) {
+      padding: 1.5rem;
+
+      .login-auth__form-container {
+        padding: $base-container-spacing;
+      }
+    }
+  }
+}
