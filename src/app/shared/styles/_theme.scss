@@ -3,7 +3,7 @@
 /**
  * Defines responsive breakpoints for different screen sizes
  */
-$base-breakpoint-2xl: 1536px;
+$base-breakpoint-2xl: 1400px;
 $base-breakpoint-lg: 992px;
 $base-breakpoint-md: 768px;
 $base-breakpoint-sm: 576px;
@@ -45,7 +45,6 @@ $white: get-color(common, white);
  * Sets Montserrat as the default font family for typography
  */
 $base-font-family: 'Montserrat', sans-serif;
-$base-font-size: 16px;
 
 /**
  * Defines box shadow for elevation and depth effects
