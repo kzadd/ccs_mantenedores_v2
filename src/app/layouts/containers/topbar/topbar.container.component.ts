@@ -10,7 +10,7 @@ import {
 import { toSignal } from '@angular/core/rxjs-interop'
 import { Router, RouterLink } from '@angular/router'
 import { NgIcon, provideIcons } from '@ng-icons/core'
-import { matAccountCircle, matLogout, matMenu } from '@ng-icons/material-icons/baseline'
+import { lucideCircleUserRound, lucideLogOut, lucideMenu } from '@ng-icons/lucide'
 import { Store } from '@ngrx/store'
 
 import { loginFeature } from '@app/features/login'
@@ -19,9 +19,9 @@ import { ResponsiveDirective } from '@app/shared/directives/responsive.directive
 import { deleteCookie } from '@app/shared/utils/cookie.utils'
 
 const TOPBAR_ICONS = {
-  logoutIcon: matLogout,
-  menuIcon: matMenu,
-  userAccountIcon: matAccountCircle
+  logoutIcon: lucideLogOut,
+  menuIcon: lucideMenu,
+  userAccountIcon: lucideCircleUserRound
 }
 
 /**

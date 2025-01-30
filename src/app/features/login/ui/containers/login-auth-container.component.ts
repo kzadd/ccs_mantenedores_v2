@@ -3,12 +3,7 @@ import { toSignal } from '@angular/core/rxjs-interop'
 import { FormGroup, NonNullableFormBuilder, ReactiveFormsModule } from '@angular/forms'
 import { Router } from '@angular/router'
 import { NgIcon, provideIcons } from '@ng-icons/core'
-import {
-  matError,
-  matLogin,
-  matVisibility,
-  matVisibilityOff
-} from '@ng-icons/material-icons/baseline'
+import { lucideCircleX, lucideEye, lucideEyeOff, lucideLogIn } from '@ng-icons/lucide'
 import { Store } from '@ngrx/store'
 import { take } from 'rxjs'
 
@@ -22,10 +17,10 @@ import { loginFeature } from '../../application/login.feature'
 import { UserCredentialsForm, UserCredentialsKey } from '../../domain/login.entity'
 
 const LOGIN_ICONS = {
-  errorIcon: matError,
-  hidePasswordIcon: matVisibilityOff,
-  loginIcon: matLogin,
-  showPasswordIcon: matVisibility
+  errorIcon: lucideCircleX,
+  hidePasswordIcon: lucideEyeOff,
+  loginIcon: lucideLogIn,
+  showPasswordIcon: lucideEye
 }
 
 /**

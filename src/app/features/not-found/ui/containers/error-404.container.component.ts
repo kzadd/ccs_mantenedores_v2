@@ -1,12 +1,12 @@
 import { ChangeDetectionStrategy, Component, inject } from '@angular/core'
 import { Router } from '@angular/router'
 import { NgIcon, provideIcons } from '@ng-icons/core'
-import { matHome } from '@ng-icons/material-icons/baseline'
+import { lucideHouse } from '@ng-icons/lucide'
 
 import { ROUTE_PATHS } from '@app/shared/constants/routes.constant'
 
 const ERROR_404_ICONS = {
-  homeIcon: matHome
+  homeIcon: lucideHouse
 }
 
 /**

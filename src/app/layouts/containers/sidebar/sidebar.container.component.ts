@@ -10,15 +10,14 @@ import {
 } from '@angular/core'
 import { NavigationEnd, Router, RouterLink } from '@angular/router'
 import { NgIcon } from '@ng-icons/core'
-import { matMessage, matSms } from '@ng-icons/material-icons/baseline'
+import { lucideHouse } from '@ng-icons/lucide'
 
 import { FULL_ROUTE_PATHS } from '@app/shared/constants/app.constant'
 import { ROUTE_PATHS } from '@app/shared/constants/routes.constant'
 import { MenuItem, MenuPathKey } from '@app/shared/types/navigation.types'
 
 const SIDEBAR_ICONS = {
-  pushSendIcon: matSms,
-  smsSendIcon: matMessage
+  homeIcon: lucideHouse
 }
 
 /**
@@ -41,7 +40,7 @@ export class SidebarContainerComponent implements OnInit {
 
   menuItems: MenuItem[] = [
     {
-      icon: SIDEBAR_ICONS.smsSendIcon,
+      icon: SIDEBAR_ICONS.homeIcon,
       label: 'Panel',
       namePath: 'dashboard',
       path: this._buildPath('dashboard')
