@@ -1,0 +1,17 @@
+@use 'sass:map';
+
+@use './palette-colors' as *;
+
+@function get-color($name, $shade) {
+  @if map.has-key($palette-colors, $name) {
+    $color-map: map.get($palette-colors, $name);
+
+    @if map.has-key($color-map, $shade) {
+      @return map.get($color-map, $shade);
+    }
+  }
+
+  @warn "Color `#{$name}` or shade `#{$shade}` not found.";
+
+  @return null;
+}

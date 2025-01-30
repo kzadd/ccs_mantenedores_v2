@@ -1,0 +1,41 @@
+@use './palette-colors' as *;
+@use './functions' as *;
+@use './theme' as *;
+
+@use './components/toast';
+
+@import 'bootstrap/scss/bootstrap';
+@import 'ngx-toastr/toastr';
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: $container;
+  color: $text-dark;
+  display: flex;
+  flex-direction: column;
+  font-family: $base-font-family;
+  font-size: $base-font-size;
+  font-synthesis: style;
+  margin: 0;
+  min-height: 100vh;
+  min-width: 360px;
+  scroll-behavior: smooth;
+  text-rendering: optimizeLegibility;
+}
+
+ng-icon {
+  overflow: initial !important;
+}
+
+@media screen and (max-width: $base-breakpoint-md) {
+  body {
+    font-size: 14px;
+  }
+}
