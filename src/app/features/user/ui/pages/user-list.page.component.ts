@@ -3,7 +3,7 @@ import { ChangeDetectionStrategy, Component } from '@angular/core'
 import { CrudHeadingComponent } from '@app/shared/components'
 import { FULL_ROUTE_PATHS } from '@app/shared/constants/app.constant'
 import { RoutePathKey } from '@app/shared/types/route.types'
-import { TableContainerComponent } from '../containers/table.container.component'
+import { TableContainerComponent } from '../containers/table/table.container.component'
 
 /**
  * User list page.
