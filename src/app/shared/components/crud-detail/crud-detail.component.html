@@ -1,0 +1,25 @@
+<div class="crud-detail">
+  <div class="crud-detail-content">
+    @for (item of details; track item.label) {
+      <div class="crud-detail-item">
+        @if (item.icon) {
+          <ng-icon [svg]="item.icon" size="0.875rem" />
+        } @else {
+          <ng-icon name="defaultIcon" size="0.875rem" />
+        }
+
+        <div class="crud-detail-item-content">
+          <div class="crud-detail-label">
+            <span class="crud-detail-label-text">
+              {{ item.label }}
+            </span>
+          </div>
+
+          <span class="crud-detail-value">
+            {{ item.value }}
+          </span>
+        </div>
+      </div>
+    }
+  </div>
+</div>

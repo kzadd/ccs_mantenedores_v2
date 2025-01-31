@@ -5,7 +5,7 @@ import { lucideArrowLeft, lucideHouse, lucidePlus } from '@ng-icons/lucide'
 
 import { FULL_ROUTE_PATHS } from '@app/shared/constants/app.constant'
 import { ROUTE_PATHS } from '@app/shared/constants/routes.constant'
-import { Breadcrumb } from '@app/shared/types/components/crud-heading.types'
+import { BreadcrumbItem } from '@app/shared/types/components/crud.types'
 import { RoutePathKey } from '@app/shared/types/route.types'
 
 const HEADING_ICONS = {
@@ -28,7 +28,7 @@ const HEADING_ICONS = {
 export class CrudHeadingComponent {
   private _router = inject(Router)
 
-  @Input({ required: true }) breadcrumbs!: Breadcrumb[]
+  @Input({ required: true }) breadcrumbs!: BreadcrumbItem[]
   @Input({ required: true }) entityName!: RoutePathKey
   @Input({ required: true }) title!: string
   @Input({ required: true }) view!: string

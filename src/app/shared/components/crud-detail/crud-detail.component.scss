@@ -1,0 +1,53 @@
+@use 'shared/styles/functions' as *;
+@use 'shared/styles/theme' as *;
+
+.crud-detail {
+  padding: $base-container-spacing;
+
+  .crud-detail-content {
+    background-color: $white;
+    border-radius: 1rem;
+    box-shadow: $base-shadow;
+    display: grid;
+    gap: 3rem;
+    grid-template-columns: 1fr;
+    padding: $base-container-spacing;
+
+    .crud-detail-item {
+      color: $text-muted;
+      display: flex;
+      gap: 0.5rem;
+
+      .crud-detail-item-content {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+
+        .crud-detail-label {
+          align-items: center;
+          display: flex;
+          font-size: 0.75rem;
+          font-weight: 600;
+          gap: 0.5rem;
+          letter-spacing: 0.05rem;
+          text-transform: uppercase;
+        }
+
+        .crud-detail-value {
+          align-items: center;
+          color: $text-dark;
+          display: flex;
+          font-size: 1.125rem;
+        }
+      }
+    }
+
+    @media screen and (min-width: $base-breakpoint-md) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media screen and (min-width: $base-breakpoint-2xl) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+}

@@ -36,7 +36,7 @@ body {
   font-synthesis: style;
   margin: 0;
   min-height: 100vh;
-  min-width: 360px;
+  min-width: 22.5rem;
   scroll-behavior: smooth;
   text-rendering: optimizeLegibility;
 }
@@ -47,7 +47,7 @@ ng-icon {
 
 @media screen and (max-width: $base-breakpoint-md) {
   body {
-    font-size: 14px;
+    font-size: 0.875rem;
   }
 }
 
@@ -70,7 +70,7 @@ ng-icon {
 .form-control,
 .form-select {
   border-radius: 0.5rem;
-  border: 1px solid $border;
+  border: 0.0625rem solid $border;
   font-size: 0.875rem;
   min-height: 3rem;
   padding: 0.5rem 1rem;
