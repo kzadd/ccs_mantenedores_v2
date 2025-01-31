@@ -5,7 +5,7 @@ import { lucideEye, lucidePencil } from '@ng-icons/lucide'
 
 import { FULL_ROUTE_PATHS } from '@app/shared/constants/app.constant'
 
-interface Action {
+interface Functionality {
   id: string
   name: string
 }
@@ -40,27 +40,27 @@ const TABLE_ICONS = {
 export class TableContainerComponent {
   private _router = inject(Router)
 
-  data: TableData<Action>[] = [
+  data: TableData<Functionality>[] = [
     { id: '0001', name: 'Opcion 1' },
     { id: '0002', name: 'Opcion 2' },
     { id: '0003', name: 'Opcion 3' },
     { id: '0004', name: 'Opcion 4' }
   ]
 
-  headers: TableHeader<Action>[] = [
+  headers: TableHeader<Functionality>[] = [
     { key: 'id', label: '#' },
     { key: 'name', label: 'Nombre' }
   ]
 
-  handleShow(item: Action): void {
+  handleShow(item: Functionality): void {
     this._router.navigate([
-      FULL_ROUTE_PATHS.dashboard.action.show.replace(':id', item.id.toString())
+      FULL_ROUTE_PATHS.dashboard.functionality.show.replace(':id', item.id.toString())
     ])
   }
 
-  handleEdit(item: Action): void {
+  handleEdit(item: Functionality): void {
     this._router.navigate([
-      FULL_ROUTE_PATHS.dashboard.action.edit.replace(':id', item.id.toString())
+      FULL_ROUTE_PATHS.dashboard.functionality.edit.replace(':id', item.id.toString())
     ])
   }
 }
