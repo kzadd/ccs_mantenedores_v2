@@ -22,7 +22,7 @@
     <div [class.topbar-dropdown--show]="dropdownOpen" class="topbar-dropdown">
       <ul class="topbar-dropdown-list">
         <li class="topbar-dropdown-item">
-          <button class="btn btn-primary w-100" (click)="handleLogout()">
+          <button (click)="handleLogout()" class="btn btn-primary w-100">
             <ng-icon name="logoutIcon" />
             Cerrar Sesión
           </button>
