@@ -1,6 +1,14 @@
 import { Routes } from '@angular/router'
 
 import { protectedRoute } from './core/guards/protected-route.guard'
+import { actionRoutes } from './features/action/action.routes'
+import { companyRoutes } from './features/company/company.routes'
+import { countryRoutes } from './features/country/country.routes'
+import { dealershipRoutes } from './features/dealership/dealership.routes'
+import { functionalityRoutes } from './features/functionality/functionality.routes'
+import { menuRoutes } from './features/menu/menu.routes'
+import { roleRoutes } from './features/role/role.routes'
+import { userRoutes } from './features/user/user.routes'
 import { ROUTE_PATHS } from './shared/constants/routes.constant'
 
 const BrandLayout = () =>
@@ -40,7 +48,15 @@ export const routes: Routes = [
         loadComponent: DashboardPage,
         path: ROUTE_PATHS.root,
         pathMatch: 'full'
-      }
+      },
+      ...actionRoutes,
+      ...companyRoutes,
+      ...countryRoutes,
+      ...dealershipRoutes,
+      ...functionalityRoutes,
+      ...menuRoutes,
+      ...roleRoutes,
+      ...userRoutes
     ],
     loadComponent: BrandLayout,
     path: ROUTE_PATHS.dashboard

@@ -1,5 +1,5 @@
 export const ROUTE_PATHS = {
-  actions: 'actions',
+  action: 'action',
   auth: 'auth',
   company: 'company',
   country: 'country',

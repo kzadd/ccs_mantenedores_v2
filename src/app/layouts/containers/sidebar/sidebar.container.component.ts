@@ -10,14 +10,32 @@ import {
 } from '@angular/core'
 import { NavigationEnd, Router, RouterLink } from '@angular/router'
 import { NgIcon } from '@ng-icons/core'
-import { lucideHouse } from '@ng-icons/lucide'
+import {
+  lucideActivity,
+  lucideBuilding2,
+  lucideHouse,
+  lucideMapPin,
+  lucideMenu,
+  lucideSettings2,
+  lucideShield,
+  lucideStore,
+  lucideUser
+} from '@ng-icons/lucide'
 
 import { FULL_ROUTE_PATHS } from '@app/shared/constants/app.constant'
 import { ROUTE_PATHS } from '@app/shared/constants/routes.constant'
 import { MenuItem, MenuPathKey } from '@app/shared/types/navigation.types'
 
 const SIDEBAR_ICONS = {
-  homeIcon: lucideHouse
+  actionIcon: lucideActivity,
+  companyIcon: lucideBuilding2,
+  countryIcon: lucideMapPin,
+  dealershipIcon: lucideStore,
+  functionalityIcon: lucideSettings2,
+  homeIcon: lucideHouse,
+  menuIcon: lucideMenu,
+  roleIcon: lucideShield,
+  userIcon: lucideUser
 }
 
 /**
@@ -44,6 +62,54 @@ export class SidebarContainerComponent implements OnInit {
       label: 'Panel',
       namePath: 'dashboard',
       path: this._buildPath('dashboard')
+    },
+    {
+      icon: SIDEBAR_ICONS.countryIcon,
+      label: 'Paises',
+      namePath: 'country',
+      path: this._buildPath('country')
+    },
+    {
+      icon: SIDEBAR_ICONS.companyIcon,
+      label: 'Empresas',
+      namePath: 'company',
+      path: this._buildPath('company')
+    },
+    {
+      icon: SIDEBAR_ICONS.dealershipIcon,
+      label: 'Concesionarios',
+      namePath: 'dealership',
+      path: this._buildPath('dealership')
+    },
+    {
+      icon: SIDEBAR_ICONS.userIcon,
+      label: 'Usuarios',
+      namePath: 'user',
+      path: this._buildPath('user')
+    },
+    {
+      icon: SIDEBAR_ICONS.roleIcon,
+      label: 'Roles',
+      namePath: 'role',
+      path: this._buildPath('role')
+    },
+    {
+      icon: SIDEBAR_ICONS.functionalityIcon,
+      label: 'Funcionalidades',
+      namePath: 'functionality',
+      path: this._buildPath('functionality')
+    },
+    {
+      icon: SIDEBAR_ICONS.menuIcon,
+      label: 'Menu',
+      namePath: 'menu',
+      path: this._buildPath('menu')
+    },
+    {
+      icon: SIDEBAR_ICONS.actionIcon,
+      label: 'Acciones',
+      namePath: 'action',
+      path: this._buildPath('action')
     }
   ]
 

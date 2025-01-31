@@ -5,7 +5,7 @@ export const FULL_ROUTE_PATHS = {
     login: `/${ROUTE_PATHS.auth}/${ROUTE_PATHS.login}`
   },
   dashboard: {
-    actions: `/${ROUTE_PATHS.dashboard}/${ROUTE_PATHS.actions}`,
+    action: `/${ROUTE_PATHS.dashboard}/${ROUTE_PATHS.action}`,
     company: `/${ROUTE_PATHS.dashboard}/${ROUTE_PATHS.company}`,
     country: `/${ROUTE_PATHS.dashboard}/${ROUTE_PATHS.country}`,
     dealership: `/${ROUTE_PATHS.dashboard}/${ROUTE_PATHS.dealership}`,
