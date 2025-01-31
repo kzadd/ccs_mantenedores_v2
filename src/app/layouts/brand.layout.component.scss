@@ -4,22 +4,22 @@
   display: flex;
   flex-direction: column;
   height: 100vh;
-  width: 100vw;
+  width: 100%;
 
-  .brand-layout__body {
+  .brand-layout-body {
     display: flex;
     flex: 1;
     overflow: hidden;
 
-    .brand-layout__overlay {
+    .brand-layout-overlay {
       background-color: rgba($black, 0.5);
       height: 100vh;
       position: fixed;
-      width: 100vw;
+      width: 100%;
       z-index: 2;
     }
 
-    .brand-layout__content {
+    .brand-layout-content {
       flex: 1;
       overflow-y: auto;
     }

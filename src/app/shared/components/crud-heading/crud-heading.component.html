@@ -1,0 +1,49 @@
+<div class="crud-heading">
+  <ol class="breadcrumb">
+    @for (item of breadcrumbs; track item.path; let first = $first; let last = $last) {
+      <li [class.crud-heading-breadcrumb-item--active]="last" class="breadcrumb-item">
+        @if (!last) {
+          <a [routerLink]="item.path" class="crud-heading-breadcrumb-link">
+            @if (first) {
+              <ng-icon name="homeIcon" size="1rem" />
+            }
+
+            <span class="crud-heading-breadcrumb-label">
+              {{ item.label }}
+            </span>
+          </a>
+        } @else {
+          <span class="crud-heading-breadcrumb-label">
+            {{ item.label }}
+          </span>
+        }
+      </li>
+    }
+  </ol>
+
+  <div class="crud-heading-content">
+    <h1 class="crud-heading-title">
+      {{ title }}
+    </h1>
+
+    <div class="crud-heading-actions">
+      @switch (view) {
+        @case ('list') {
+          <button (click)="handleCreateNewRegister()" class="btn btn-primary">
+            <ng-icon name="createIcon" />
+
+            Crear nuevo registro
+          </button>
+        }
+
+        @default {
+          <button (click)="handleBackToList()" class="btn btn-outline-primary">
+            <ng-icon name="backIcon" />
+
+            Volver al listado
+          </button>
+        }
+      }
+    </div>
+  </div>
+</div>

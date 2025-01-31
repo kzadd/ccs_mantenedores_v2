@@ -13,17 +13,17 @@
     transform: translateX(0);
   }
 
-  .sidebar__navigation {
+  .sidebar-navigation {
     padding: 1rem 0;
 
-    .sidebar__menu {
+    .sidebar-menu {
       display: flex;
       flex-direction: column;
       gap: 0.5rem;
       padding: 0;
 
-      .sidebar__menu-item {
-        .sidebar__menu-link {
+      .sidebar-menu-item {
+        .sidebar-menu-link {
           align-items: center;
           border-radius: 0.5rem;
           color: $text-light;
@@ -36,7 +36,7 @@
           text-decoration: none;
           transition: all 0.2s ease;
 
-          &.sidebar__menu-link--active,
+          &.sidebar-menu-link--active,
           &:hover {
             background-color: get-color(gray, 100);
             color: $text-dark;
@@ -44,7 +44,7 @@
           }
         }
 
-        &.sidebar__menu-item--empty .sidebar__menu-empty-label {
+        &.sidebar-menu-item--empty .sidebar-menu-empty-label {
           align-items: center;
           color: $text-light;
           display: flex;

@@ -1,27 +1,27 @@
 <header class="topbar">
-  <a class="topbar__logo-link" routerLink="/">
-    <img alt="Kaufmann" class="topbar__logo" src="images/isotipo.png" />
-    <span *appResponsive="'up:md'" class="topbar__logo-name">Administrador de usuarios</span>
+  <a class="topbar-logo-link" routerLink="/">
+    <img alt="Kaufmann" class="topbar-logo" src="images/isotipo.png" />
+    <span *appResponsive="'up:md'" class="topbar-logo-name">Administrador de usuarios</span>
   </a>
 
-  <div (click)="handleToggleSidebar()" *appResponsive="'down:xl'" class="topbar__menu--toggle">
+  <div (click)="handleToggleSidebar()" *appResponsive="'down:xl'" class="topbar-menu--toggle">
     <ng-icon name="menuIcon" size="1.5rem" />
   </div>
 
   <div
     (mouseenter)="handleProfileHover(true)"
     (mouseleave)="handleProfileHover(false)"
-    class="topbar__profile"
+    class="topbar-profile"
   >
-    <span class="topbar__profile-name">
+    <span class="topbar-profile-name">
       {{ profileName }}
     </span>
 
     <ng-icon name="userAccountIcon" size="2rem" />
 
-    <div [class.topbar__dropdown--show]="dropdownOpen" class="topbar__dropdown">
-      <ul class="topbar__dropdown-list">
-        <li class="topbar__dropdown-item">
+    <div [class.topbar-dropdown--show]="dropdownOpen" class="topbar-dropdown">
+      <ul class="topbar-dropdown-list">
+        <li class="topbar-dropdown-item">
           <button class="btn btn-primary w-100" (click)="handleLogout()">
             <ng-icon name="logoutIcon" />
             Cerrar Sesión

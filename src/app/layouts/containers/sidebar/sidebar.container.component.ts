@@ -24,7 +24,8 @@ import {
 
 import { FULL_ROUTE_PATHS } from '@app/shared/constants/app.constant'
 import { ROUTE_PATHS } from '@app/shared/constants/routes.constant'
-import { MenuItem, MenuPathKey } from '@app/shared/types/navigation.types'
+import { MenuItem } from '@app/shared/types/navigation.types'
+import { RoutePathKey } from '@app/shared/types/route.types'
 
 const SIDEBAR_ICONS = {
   actionIcon: lucideActivity,
@@ -121,7 +122,7 @@ export class SidebarContainerComponent implements OnInit {
     })
   }
 
-  private _buildPath(section: MenuPathKey): string {
+  private _buildPath(section: RoutePathKey): string {
     return section === ROUTE_PATHS.dashboard
       ? FULL_ROUTE_PATHS.dashboard.root
       : `${FULL_ROUTE_PATHS.dashboard.root}/${ROUTE_PATHS[section]}`

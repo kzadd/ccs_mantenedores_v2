@@ -8,7 +8,7 @@
   overflow: hidden;
   position: relative;
 
-  .error-404__wave-pattern {
+  .error-404-wave-pattern {
     height: 100%;
     inset: 0;
     object-fit: cover;
@@ -17,7 +17,7 @@
     z-index: -1;
   }
 
-  .error-404__content {
+  .error-404-content {
     background-color: $white;
     border-radius: 1rem;
     box-shadow: $base-shadow;
@@ -28,7 +28,7 @@
     position: relative;
     width: 28rem;
 
-    .error-404__title {
+    .error-404-title {
       font-size: 8rem;
       font-weight: 700;
       letter-spacing: -0.8rem;
@@ -38,7 +38,7 @@
       }
     }
 
-    .error-404__description {
+    .error-404-description {
       color: $text-muted;
       margin-bottom: 1rem;
     }

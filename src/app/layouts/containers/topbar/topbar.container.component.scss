@@ -10,19 +10,19 @@
   padding: 0 $base-container-spacing;
   position: relative;
 
-  .topbar__logo-link {
+  .topbar-logo-link {
     align-items: center;
     color: currentColor;
     display: flex;
     gap: 0.8rem;
     text-decoration: none;
 
-    .topbar__logo {
+    .topbar-logo {
       height: 2.5rem;
       width: auto;
     }
 
-    .topbar__logo-name {
+    .topbar-logo-name {
       font-size: 1.25rem;
       font-weight: 600;
       letter-spacing: -0.05rem;
@@ -30,12 +30,12 @@
     }
   }
 
-  .topbar__menu--toggle {
+  .topbar-menu--toggle {
     cursor: pointer;
     display: flex;
   }
 
-  .topbar__profile {
+  .topbar-profile {
     align-items: center;
     cursor: pointer;
     display: flex;
@@ -45,7 +45,7 @@
     height: calc($base-topbar-height - 1rem);
     margin-left: auto;
 
-    .topbar__dropdown {
+    .topbar-dropdown {
       background-color: $white;
       border-radius: 0.5rem;
       box-shadow: $base-shadow;
@@ -57,7 +57,7 @@
       top: 85%;
       z-index: 10;
 
-      .topbar__dropdown-list {
+      .topbar-dropdown-list {
         display: flex;
         flex-direction: column;
         gap: 0.5rem;
@@ -65,12 +65,12 @@
         margin: 0;
         padding: 0;
 
-        .topbar__dropdown-item {
+        .topbar-dropdown-item {
           padding: 1rem;
         }
       }
 
-      &.topbar__dropdown--show {
+      &.topbar-dropdown--show {
         display: block;
       }
     }
