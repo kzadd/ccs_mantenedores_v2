@@ -1,25 +1,27 @@
 import { ROUTE_PATHS } from './routes.constant'
 
+const buildCrudRoutes = (basePath: string) => ({
+  create: `/${ROUTE_PATHS.dashboard}/${basePath}/${ROUTE_PATHS.create}`,
+  edit: `/${ROUTE_PATHS.dashboard}/${basePath}/${ROUTE_PATHS.edit}`,
+  list: `/${ROUTE_PATHS.dashboard}/${basePath}/${ROUTE_PATHS.list}`,
+  root: `/${ROUTE_PATHS.dashboard}/${basePath}`,
+  show: `/${ROUTE_PATHS.dashboard}/${basePath}/${ROUTE_PATHS.show}`
+})
+
 export const FULL_ROUTE_PATHS = {
   auth: {
     login: `/${ROUTE_PATHS.auth}/${ROUTE_PATHS.login}`
   },
   dashboard: {
-    action: `/${ROUTE_PATHS.dashboard}/${ROUTE_PATHS.action}`,
-    company: `/${ROUTE_PATHS.dashboard}/${ROUTE_PATHS.company}`,
-    country: {
-      create: `/${ROUTE_PATHS.dashboard}/${ROUTE_PATHS.country}/${ROUTE_PATHS.create}`,
-      edit: `/${ROUTE_PATHS.dashboard}/${ROUTE_PATHS.country}/${ROUTE_PATHS.edit}`,
-      list: `/${ROUTE_PATHS.dashboard}/${ROUTE_PATHS.country}/${ROUTE_PATHS.list}`,
-      root: `/${ROUTE_PATHS.dashboard}/${ROUTE_PATHS.country}`,
-      show: `/${ROUTE_PATHS.dashboard}/${ROUTE_PATHS.country}/${ROUTE_PATHS.show}`
-    },
-    dealership: `/${ROUTE_PATHS.dashboard}/${ROUTE_PATHS.dealership}`,
-    functionality: `/${ROUTE_PATHS.dashboard}/${ROUTE_PATHS.functionality}`,
-    menu: `/${ROUTE_PATHS.dashboard}/${ROUTE_PATHS.menu}`,
-    role: `/${ROUTE_PATHS.dashboard}/${ROUTE_PATHS.role}`,
+    action: buildCrudRoutes(ROUTE_PATHS.action),
+    company: buildCrudRoutes(ROUTE_PATHS.company),
+    country: buildCrudRoutes(ROUTE_PATHS.country),
+    dealership: buildCrudRoutes(ROUTE_PATHS.dealership),
+    functionality: buildCrudRoutes(ROUTE_PATHS.functionality),
+    menu: buildCrudRoutes(ROUTE_PATHS.menu),
+    role: buildCrudRoutes(ROUTE_PATHS.role),
     root: `/${ROUTE_PATHS.dashboard}`,
-    user: `/${ROUTE_PATHS.dashboard}/${ROUTE_PATHS.user}`
+    user: buildCrudRoutes(ROUTE_PATHS.user)
   }
 }
 
