@@ -1,0 +1,34 @@
+@use 'shared/styles/theme' as *;
+
+.form {
+  padding: 2rem;
+
+  .form-container {
+    background-color: $white;
+    border-radius: 0.5rem;
+    box-shadow: $base-shadow;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    padding: $base-container-spacing;
+
+    .form-form {
+      display: grid;
+      gap: 1.5rem;
+      grid-template-columns: 1fr;
+
+      @media screen and (min-width: $base-breakpoint-md) {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      @media screen and (min-width: $base-breakpoint-2xl) {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    .btn {
+      width: 100%;
+      max-width: 200px;
+    }
+  }
+}
